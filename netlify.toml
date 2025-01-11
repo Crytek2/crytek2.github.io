@@ -1,0 +1,4 @@
+[[headers]]
+for = "/*"
+[headers.values]
+  Content-Security-Policy = "frame-ancestors 'self' https://frendlycommunity.netlify.app https://player.twitch.tv"

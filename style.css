@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* A teljes képernyőmagasság kitöltése */
+  display: flex; /* Flexbox aktiválása */
+  justify-content: center; /* Horizontális középre igazítás */
+  align-items: center; /* Vertikális középre igazítás */
+  background-color: #f4f4f4; /* Háttérszín */
+  font-family: Arial, sans-serif; /* Alapértelmezett betűtípus */
+}
+
+.centered-container {
+  text-align: center; /* A szövegen belüli középre igazítás */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Áttetsző fehér háttér */
+  border-radius: 10px; /* Lekerekített sarkok */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Árnyék */
+}

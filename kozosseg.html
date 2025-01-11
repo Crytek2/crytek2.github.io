@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <!-- A karakterek kódolása (UTF-8) és a viewport beállítások mobilbarát dizájnhoz -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Friendly Community</title>
+
+    <!-- Font Awesome CDN a ikonokhoz (az ikonok betöltéséhez) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* Az alapértelmezett margó és padding törlése, hogy az oldalon minden elem szép egységesen legyen */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Az alap teststílus beállítása */
+        body {
+            font-family: Arial, sans-serif; /* Betűtípus */
+            background-color: #f4f4f4; /* Háttérszín */
+            background-image: url('images/background.jpg'); /* Háttérkép a "images" mappából */
+            background-size: cover; /* A háttérkép lefedje az egész képernyőt */
+            background-position: center; /* A háttér középre van igazítva */
+            background-attachment: fixed; /* A háttér nem mozog görgetés közben */
+            display: flex; /* Flexbox elrendezés, hogy könnyebben kezeljük a layoutot */
+            flex-direction: column; /* Az egész oldal vertikálisan rendeződik */
+            height: 100vh; /* A teljes magasságot kitölti */
+            
+        }
+
+        /* A szöveg konténer stílusa */
+        .centered-text {
+            text-align: center; /* A szövegen belüli középre igazítás */
+            color: #f5eeee; /* Szöveg színe */
+            padding: 20px;
+            background: transparent(255, 255, 255, 0.8); /* Áttetsző fehér háttér */
+            border-radius: 10px; /* Lekerekített sarkok */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Árnyék a doboz körül */
+        }
+
+        /* Bal oldali navigációs panel */
+        header {
+            background-color: transparent; /* Sötét háttérszín */
+            color: white; /* Fehér szöveg */
+            width: 200px; /* A navigáció szélessége */
+            height: 100vh; /* A navigáció magassága, ami kitölti a teljes képernyőt */
+            display: flex;
+            flex-direction: column; /* Vertikális elrendezés */
+            align-items: center; /* A tartalom középre igazítása */
+            padding: 20px; /* Térköz az elemek körül */
+        }
+
+        /* Logó stílusa */
+        header .logo img {
+            width: 150px; /* A logó szélessége */
+            height: auto; /* Automatikus magasság, hogy az arányok megmaradjanak */
+            margin-bottom: 20px; /* Margó az alján, hogy legyen hely a többi elemnek */
+        }
+
+        /* Navigációs lista */
+        header ul {
+            list-style-type: none; /* A lista pontok eltávolítása */
+            padding: 0;
+            width: 100%; /* Az egész szélesség kitöltése */
+            display: flex; /* Flexbox használata a listaelemek kezelésére */
+            flex-direction: column; /* Vertikális elrendezés */
+            align-items: center; /* Középre igazítja az elemeket */
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.171); /* Árnyék a hero szakasz körül */
+        }
+
+        /* Minden listaelem stílusa (navigációs menüpontok) */
+        header ul li {
+            display: flex; /* Flexbox, hogy a szöveg és az ikon egymás mellett legyen */
+            flex-direction: column; /* Az ikon és szöveg egymás alatt jelenjen meg */
+            align-items: center; /* Középre igazítja az elemeket */
+            margin-bottom: 20px; /* Margó az egyes menüpontok között */
+            
+        }
+
+        /* Linkek stílusa a navigációban */
+        header ul li a {
+            color: white; /* Fehér szöveg */
+            text-decoration: none; /* A linkek aláhúzása eltávolítva */
+            font-size: 20px; /* A szöveg mérete */
+            margin-top: 10px; /* Kis távolság az ikon és a szöveg között */
+            
+        }
+
+        /* Hover effektus a linkekre (amikor rákattintanak) */
+        header ul li a:hover {
+            color: #ff6347; /* Piros színű szöveg, ha fölé viszik az egeret */
+        }
+
+        /* Ikonok stílusa */
+        header ul li a i {
+            font-size: 25px; /* Az ikonok mérete */
+        }
+
+        /* Fő tartalom (main) stílusa */
+        main {
+            padding: 15px; /* Térköz a tartalom körül */
+            flex: 1; /* Kitölti a maradék helyet */
+            background-color: transparent; /* Háttérszín */
+        }
+
+        /* Hero szakasz stílusa, a bemutatkozó szöveg számára */
+        .hero {
+            background: transparent; /* Fehér háttér */
+            padding: 10px; /* Nagyobb térköz a szöveg körül */
+            text-align: center; /* Középre igazítja a szöveget */
+            margin-top: 5px; /* Felül margó, hogy legyen tér a tartalom és a fejléc között */
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.712); /* Árnyék a hero szakasz körül */
+            color: white; /* Fehér szöveg */
+        }
+
+        /* Lábléc (footer) stílusa */
+        footer {
+            background-color: transparent; /* Sötét háttér */
+            text-align: center;
+            color: white; /* Fehér szöveg */
+            text-align: center; /* Középre igazítja a szöveget */
+            padding: 20px; /* Térköz */
+            width: 100%; /* Kitölti a teljes szélességet */
+            position: relative; /* A láblécet a képernyő aljára helyezi */
+            bottom: 0; /* Az oldal aljára helyezi */
+        }
+    </style>
+</head>
+    <!-- Fejléc: navigációs menü -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Community Logo">
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Főoldal</a></li>
+            <li><a href="kozosseg.html"><i class="fas fa-users"></i> Közösség</a></li>
+            <li><a href=csapat.html><i class="fas fa-info-circle"></i> Csapat</a></li>
+            <li><a href="stream.html"><i class="fas fa-envelope"></i> Élő adások</a></li>
+        </ul>
+    </header>
+
+
+    <!-- Lábléc -->
+    <footer>
+        <p>&copy; 2025 Friendly Community Weboldal. Minden jog fenntartva.</p>
+    </footer>
+</body>
+</html>

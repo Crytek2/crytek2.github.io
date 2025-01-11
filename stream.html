@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendly Community - Élő adások</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: transparent;
+            color: white;
+            width: 200px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header .logo img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        header ul {
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header ul li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        header ul li a:hover {
+            color: #ff6347;
+        }
+
+        header ul li a i {
+            font-size: 25px;
+        }
+
+        main {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .streams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .stream-section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .stream-section h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .stream-section iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .stream-section a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            font-size: 14px;
+            color: white;
+            background-color: #9146FF;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .stream-section a:hover {
+            background-color: #772ce8;
+        }
+
+        footer {
+            background-color: transparent;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fejléc -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Community Logo">
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Főoldal</a></li>
+            <li><a href="kozosseg.html"><i class="fas fa-users"></i> Közösség</a></li>
+            <li><a href="csapat.html"><i class="fas fa-info-circle"></i> Csapat</a></li>
+            <li><a href="stream.html"><i class="fas fa-video"></i> Élő adások</a></li>
+        </ul>
+    </header>
+
+    <!-- Fő tartalom -->
+    <main>
+        <div class="streams-grid">
+            <!-- Twitch Stream -->
+            <div class="stream-section">
+                <h2>Twitch Stream</h2>
+                <iframe 
+                    src="https://player.twitch.tv/?channel=ibally&parent=yourappname.netlify.app" 
+                    allowfullscreen>
+                </iframe>
+                <a href="https://www.twitch.tv/ibally" target="_blank">Nézd meg Twitch-en</a>
+            </div>
+            <!-- YouTube Stream -->
+            <div class="stream-section">
+                <h2>YouTube Stream</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    allowfullscreen>
+                </iframe>
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank">Nézd meg YouTube-on</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lábléc -->
+    <footer>
+        <p>&copy; 2025 Friendly Community Weboldal. Minden jog fenntartva.</p>
+    </footer>
+</body>
+</html>
+
+
